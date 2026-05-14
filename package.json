@@ -1,0 +1,34 @@
+{
+  "name": "fotoexpress",
+  "version": "0.1.0",
+  "description": "Plataforma de marketplace para fotógrafos de eventos e esportes",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
+    "backend:dev": "cd backend && npm run dev",
+    "frontend:dev": "cd frontend && npm run dev",
+    "backend:build": "cd backend && npm run build",
+    "frontend:build": "cd frontend && npm run build",
+    "test": "concurrently \"cd backend && npm test\" \"cd frontend && npm test\"",
+    "lint": "concurrently \"cd backend && npm run lint\" \"cd frontend && npm run lint\""
+  },
+  "keywords": [
+    "fotos",
+    "fotografia",
+    "eventos",
+    "esportes",
+    "marketplace",
+    "vendas",
+    "brasil"
+  ],
+  "author": "FotoExpress Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
