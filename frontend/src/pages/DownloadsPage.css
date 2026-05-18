@@ -1,0 +1,192 @@
+.downloads-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 32px 20px 120px;
+}
+
+.downloads-container h1 {
+  margin-bottom: 8px;
+}
+
+.downloads-container > h1::after {
+  content: ' ⬇️';
+}
+
+.downloads-container > h1 + p,
+.downloads-subtitle {
+  color: var(--color-text-muted);
+  margin-bottom: 32px;
+}
+
+.downloads-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.download-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.download-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.download-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.gallery-title {
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.purchased-date {
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+  margin: 0;
+}
+
+.purchased-date::before {
+  content: '✓ ';
+  color: var(--color-success);
+  font-weight: 700;
+}
+
+.card-info .price {
+  margin-top: 6px;
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin: 0 16px 16px;
+  flex-wrap: wrap;
+}
+
+.btn-download,
+.btn-print {
+  flex: 1;
+  min-width: 100px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  transition: all var(--transition);
+}
+
+.btn-download {
+  background: var(--color-text);
+  color: white;
+}
+
+.btn-download:hover {
+  background: #27272a;
+}
+
+.btn-print {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.btn-print:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+.downloads-empty {
+  max-width: 480px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 60px 32px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.downloads-empty::before {
+  content: '📷';
+  display: block;
+  font-size: 4rem;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.downloads-empty p {
+  font-size: 1.1rem;
+  margin: 0 0 24px;
+}
+
+.downloads-empty button {
+  padding: 12px 28px;
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+}
+
+.downloads-empty button:hover {
+  background: var(--color-primary-hover);
+}
+
+.story-section {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 2px solid var(--color-border);
+}
+
+.story-section::before {
+  content: '✨ Criar Histórias';
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .downloads-container {
+    padding: 20px 16px 120px;
+  }
+
+  .downloads-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .gallery-title {
+    font-size: 0.85rem;
+  }
+
+  .story-section {
+    margin-top: 40px;
+    padding-top: 30px;
+  }
+}

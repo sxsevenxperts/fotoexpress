@@ -1,0 +1,129 @@
+.breadcrumb-container {
+  width: 100%;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.breadcrumb {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.breadcrumb-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.breadcrumb-step {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.breadcrumb-step.active {
+  background: #4CAF50;
+  color: white;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.breadcrumb-step.current {
+  transform: scale(1.1);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(76, 175, 80, 0.5);
+  }
+}
+
+.breadcrumb-label {
+  font-size: 0.85rem;
+  color: #999;
+  text-align: center;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.breadcrumb-label.active {
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+.breadcrumb-line {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: calc(100% - 40px);
+  height: 2px;
+  background: #e0e0e0;
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
+.breadcrumb-line.completed {
+  background: #4CAF50;
+}
+
+.progress-bar {
+  max-width: 1200px;
+  margin: 20px auto 0;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50 0%, #45a049 100%);
+  transition: width 0.5s ease;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb-container {
+    padding: 20px 10px;
+  }
+
+  .breadcrumb {
+    gap: 10px;
+  }
+
+  .breadcrumb-step {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .breadcrumb-label {
+    font-size: 0.75rem;
+  }
+
+  .breadcrumb-line {
+    display: none;
+  }
+}

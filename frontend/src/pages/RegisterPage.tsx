@@ -7,7 +7,8 @@ export default function RegisterPage() {
     name: '',
     email: '',
     password: '',
-    role: 'customer'
+    role: 'customer',
+    referral_code: ''
   });
   const navigate = useNavigate();
 
@@ -51,6 +52,11 @@ export default function RegisterPage() {
             <option value="customer">Cliente</option>
             <option value="photographer">Fotógrafo</option>
           </select>
+        </div>
+        <div style={{ marginBottom: '1rem' }}>
+          <label style={{ display: 'block', marginBottom: '0.5rem' }}>Código de Referência (opcional)</label>
+          <input type="text" name="referral_code" value={formData.referral_code} onChange={handleChange} placeholder="Deixe em branco se não tiver" style={{ width: '100%', padding: '0.5rem', borderRadius: '4px', border: '1px solid #ddd', textTransform: 'uppercase' }} />
+          <small style={{ color: '#666', display: 'block', marginTop: '0.25rem' }}>Se um fotógrafo te enviou um código, cole aqui para ganhar descontos!</small>
         </div>
         <button type="submit" style={{ width: '100%', padding: '0.75rem', background: '#28a745', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
           Registrar

@@ -11,7 +11,6 @@ interface User {
 
 export default function ProfilePage() {
   const [user, setUser] = useState<User | null>(null);
-  const [editing, setEditing] = useState(false);
 
   useEffect(() => {
     const token = localStorage.getItem('token');
